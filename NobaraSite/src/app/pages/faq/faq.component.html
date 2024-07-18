@@ -1,0 +1,81 @@
+<div class="faq-container">
+  <h1 class="text-center my-5">Frequently Asked Questions</h1>
+  <div class="faq-item pb-3">
+    <h2>Will there ever be other Desktop Environment versions?</h2>
+    <p>No. The ‘Official’ modified GNOME release layout was designed for myself and my father out of personal
+      preference. GNOME and KDE are additionally shipped to appease most major users, and all 3 are shipped because they
+      support VRR — variable refresh rate (aka freesync) on wayland, which is a long term goal for gaming on linux.
+      Other DEs at this time do not support VRR.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Will you create a minimal install disk so we can install our own DE?</h2>
+    <p>No. Our branding changes affect packages that other DEs pull in or require, and we will not be changing those
+      packages to accommodate for DEs we don’t ship as ISOs. Additionally there are too many individual DE
+      quirks/bugs/differences between them and we cannot support debugging all of them.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Will you create a network install?</h2>
+    <p>No. There are no plans to create a minimal and/or network install.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Is there a torrent available for download?</h2>
+    <p>No. We currently update the ISO way too often (sometimes multiple times in the same week) for a long-term torrent
+      to be available.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>I heard Nobara breaks SELinux, is this true?</h2>
+    <p>No. We have completely swapped SELinux in favor of AppArmor (this is what Ubuntu and OpenSUSE use). We find
+      AppArmor to be more user friendly, less intrusive, and easier to manage and write policies for. You will still see
+      some SELinux packages installed which are required to keep Fedora compatibility and not break package
+      dependencies, but SELinux is otherwise disabled.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Is Nobara compatible with SecureBoot?</h2>
+    <p>No. Nobara ships with a kernel that has been custom patched and is built and hosted on COPR. Packages hosted on
+      COPR repositories have no simple way of signing the kernel after it’s been built. Additionally The boot shim has
+      to be signed by Microsoft, whom have several stipulations that need to be met including the fee: <a
+        href="https://techcommunity.microsoft.com/t5/hardware-dev-center/updated-uefi-signing-requirements/ba-p/1062916">https://techcommunity.microsoft.com/t5/hardware-dev-center/updated-uefi-signing-requirements/ba-p/1062916</a>.
+      We are a hobby distribution that uses a custom kernel. We have no plans what so ever to work towards meeting the
+      shim signing requirements, let alone any additional custom kernel requirements.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Can I upgrade from Fedora to Nobara using the Nobara repositories?</h2>
+    <p>NO. This is a big large huge NO. The Nobara install ISOs have a ton of packages that get installed which are
+      specific to Nobara, and not installed on Fedora on fresh install. When you try to upgrade from Fedora to Nobara by
+      just using the Nobara repos none of those extra packages get installed. Additionally Nobara changes a lot of
+      Fedora’s base packages and branding. Things WILL break. Fedora installations updated to Nobara using the Nobara
+      repos are -NOT- supported. A clean installation is required.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>I imagine normal updates are fine, but is there anything special going on with distro upgrades? When fedora 37
+      comes out will nobara 37 be available as well or is it delayed?</h2>
+    <p>Delayed. In general I personally waited about 2 weeks after Fedora releases for any release bugs to be ironed
+      out. Add that to the time it will take to convert Nobara packages to version 37 and you can expect about a month
+      delay.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Is the kernel kept more up to date than fedoras kernel? Linux 5.19 improves performance greatly on my system, so
+      will that be available when it becomes stable?</h2>
+    <p>We use Fedora’s exact kernel version with our patches added to it, and release them usually as they come out or a
+      few days later at the latest.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>Just how modified is Nobara aside from what I can see? A recent glibc update broke eac on many games, does
+      gloriouseggroll have the capacity to delay this should it come to fedora? (Same with other things that may
+      introduce new bugs/breakage). Essentially how close to base fedora is it and how much control does gloriouseggroll
+      have?</h2>
+    <p>Heavily. All of the packages we modify can be see in the fedora.repo package exclude list. We ship our own
+      version of the fedora-repos package with a large exclude list of every package that both we and fedora provide so
+      that they do not conflict. This allows us to keep our own packages version controlled while also letting Fedora’s
+      packages automatically update as needed. If dependency discrepancies come up they are usually resolved within a
+      day or two and/or documented in the Nobara docs section of the website -if- they need user intervention.</p>
+  </div>
+  <div class="faq-item pb-3">
+    <h2>This project is quite new, is it going anywhere new? Is there anything to say it won’t just up stop development?
+      Is it something that is recommendable to daily drive? (I am quite technical, and can troubleshoot my issues).</h2>
+    <p>As long as I am alive and using linux this project will continue. It started because I needed something both
+      myself and my father could easily use from clean install without time consuming troubleshooting or extra package
+      and repo installation. As stated in the project goal — while some of us -do- have the technical adept to resolve
+      issues, sometimes we just don’t have the time. Part of the goal is to keep those issues to a minimum.</p>
+  </div>
+</div>
