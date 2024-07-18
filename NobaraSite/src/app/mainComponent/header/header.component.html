@@ -1,29 +1,25 @@
-<header>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid py-2 mx-5">
-      <a class="navbar-brand text-black fs-4" href="#"><img class="logo img-fluid"
-          src="https://res.cloudinary.com/dz2dgihhs/image/upload/v1721303006/cropped-nobara_penguin_logotype_1_auy1ho.png" alt="logo"></a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav mb-2 pt-3 fs-5">
-          <li class="nav-item">
-            <a class="nav-link text-light" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="index.html">Download</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="index.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="index.html">FAQ</a>
-          </li>
-        </ul>
-      </div>
+<header class="p-3 mainNav">
+  <div class="container-fluid">
+    <div class="d-flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
+      <a class="navbar-brand brand" routerLink="/">
+        <img class="logo"
+          src="https://res.cloudinary.com/dz2dgihhs/image/upload/v1721303006/cropped-nobara_penguin_logotype_1_auy1ho.png"
+          alt="logo" />
+      </a>
+      <ul class="nav col-12 col-lg-auto mt-3 justify-content-center justify-content-lg-end">
+        <li class="nav-item active">
+          <a class="nav-link text-light" routerLink="/"><i class="bi bi-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="download"><i class="bi bi-download"></i> Download</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="about"><i class="bi bi-info-circle"></i> About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="faq"><i class="bi bi-patch-question mx-1"></i> FAQ</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
 </header>

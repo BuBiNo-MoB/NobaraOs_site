@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './mainComponent/header/header.component';
 import { FooterComponent } from './mainComponent/footer/footer.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DownloadComponent } from './pages/download/download.component';
 
