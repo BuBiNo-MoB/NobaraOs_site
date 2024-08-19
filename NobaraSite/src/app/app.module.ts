@@ -9,6 +9,7 @@ import { FooterComponent } from './mainComponent/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { DownloadComponent } from './pages/download/download.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FaqComponent } from './pages/faq/faq.component';
     HeaderComponent,
     FooterComponent,
     DownloadComponent,
-    FaqComponent
+    FaqComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
